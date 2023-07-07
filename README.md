@@ -1,26 +1,44 @@
 # Next.js OpenJira App
 
-Para correr localmente, se necesita la base de datos
+-   Descargar el proyecto
+
+```
+git clone https://github.com/cristianquaglio/openjira.git
+```
+
+-   Levantar la base de datos en Docker
 
 ```
 docker-compose up -d
 ```
 
--   El -d significa **detached**
--   MongoDB URL Local:
+-   la URL de la base de datos es
 
 ```
 mongodb://localhost:27017/entriesdb
 ```
 
-## Configurar las variables de entorno
+-   Configurar las variables de entorno
 
-Renombrar el archivo **.env.template** a **.env**
+```
+mv .env.template .env
+```
 
-## Llenar la base de datos con información de pruebas
+-   Reconstruir los módulos de node y levantar Next
 
-Llamada:
+```
+yarn
+yarn run dev
+```
+
+-   Llenar la base de datos con información de pruebas
 
 ```
     http://localhost:3000/api/seed
+```
+
+-   Ingresar a la app desde:
+
+```
+    http://localhost:3000
 ```
