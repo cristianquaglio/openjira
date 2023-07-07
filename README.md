@@ -28,7 +28,7 @@ mv .env.template .env
 
 ```
 yarn
-yarn run dev
+yarn dev
 ```
 
 -   Llenar la base de datos con información de pruebas
